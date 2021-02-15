@@ -9,7 +9,7 @@ namespace TuSuper.Web.Controllers
 {
     public class ProductoController : Controller
     {
-        // GET: Productos
+        // GET: Producto
         public ActionResult Index()
         {
             var productosBL = new ProductosBL();
