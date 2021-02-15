@@ -7,7 +7,7 @@ using TuSuper.BL;
 
 namespace TuSuper.Web.Controllers
 {
-    public class ProductoController : Controller
+    public class ProductosController : Controller
     {
         // GET: Producto
         public ActionResult Index()

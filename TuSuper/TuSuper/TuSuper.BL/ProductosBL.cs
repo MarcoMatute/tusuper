@@ -11,16 +11,19 @@ namespace TuSuper.BL
 
         Contexto _contexto;
 
+        public List<Producto> ListadeProductos { get; set; }
+
         public ProductosBL()
         {
             _contexto = new Contexto();
+            ListadeProductos = new List<Producto>();
         }
 
 
         public List<Producto> ObtenerProducutos()
         {
-
-            return _contexto.Productos.ToList();
+            ListadeProductos = _contexto.Productos.ToList();
+            return ListadeProductos;
         }
             
     }
