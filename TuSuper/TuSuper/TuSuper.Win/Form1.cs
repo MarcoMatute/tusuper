@@ -22,5 +22,10 @@ namespace TuSuper.Win
             listadeProductosBindingSource.DataSource = listadeProductos;
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
