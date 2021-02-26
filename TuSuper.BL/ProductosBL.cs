@@ -39,6 +39,7 @@ namespace TuSuper.BL
                 var productoExistente = _contexto.Productos.Find(producto.Id);
                 productoExistente.CategoriaId = producto.CategoriaId;
                 productoExistente.Descripcion = producto.Descripcion;
+                productoExistente.UrlImagen = producto.UrlImagen;
 
                 productoExistente.Precio = producto.Precio;
             }
@@ -47,8 +48,10 @@ namespace TuSuper.BL
         }
         public Producto Obtenerproducto(int id)
         {
-           
-            var producto = _contexto.Productos.Find(id);
+
+            var producto = _contexto.Productos
+                .Include("Categoria").FirstOrDefault(p => p.Id == id);
+
             return producto;
              
         }
