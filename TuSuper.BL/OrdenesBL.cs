@@ -9,23 +9,23 @@ namespace TuSuper.BL
     public class OrdenesBL
     {
         Contexto _contexto;
-        public List<Orden> ListadeOdenes { get; set; }
+        public List<Orden> ListadeOrdenes { get; set; }
 
 
         public OrdenesBL()
         {
             _contexto = new Contexto();
-            ListadeOdenes = new List<Orden>();
+            ListadeOrdenes = new List<Orden>();
         }
         public List<Orden> ObtenerOrdenes()
         {
 
-            ListadeOdenes = _contexto.Ordenes
+            ListadeOrdenes = _contexto.Ordenes
                 .Include("Cliente")
                 .ToList();
 
 
-            return ListadeOdenes;
+            return ListadeOrdenes;
         }
 
 
